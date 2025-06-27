@@ -1,3 +1,82 @@
 h1{
     text-align: center;
 }
+
+.code-block {
+    background-color: #2d2d2d;
+    border-radius: 8px;
+    /* 内容のはみ出しを隠す: 角丸と合わせて内部コンテンツをクリップ */
+    overflow: hidden;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* フォントファミリー: プログラミングに適した等幅フォントを優先して指定 */
+    /* 環境によって表示できるフォントが変わるため、いくつか候補を列挙 */
+    font-family: 'Fira Code', 'Cascadia Code', 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace;
+    color: #f8f8f2;
+}
+
+.code-header {
+    display: flex;
+    /* 子要素を両端に配置: 言語名を左端、コピーボタンを右端 */
+    justify-content: space-between;
+    /* 子要素を垂直方向の中央に配置 */
+    align-items: center;
+    background-color: #3c3c3c;
+    padding: 10px 15px;
+    border-bottom: 1px solid #4a4a4a;
+    color: #cccccc;
+    font-size: 0.9em;
+}
+
+.code-block pre {
+    margin: 0;
+    padding: 15px;
+    overflow-x: auto;
+}
+
+.code-block code {
+    /* ブロック要素として表示: 幅いっぱいに広がり、改行される */
+    display: block;
+    /* ホワイトスペースの処理: ソースコードの改行と空白を保持し、必要に応じて折り返す */
+    white-space: pre-wrap;
+    /* 長い単語やURLを途中で改行する（オーバーフロー対策） */
+    word-break: break-all;
+    /* 行の高さ: コードの行間を調整 */
+    line-height: 1.5;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+.code-block code .token.keyword {
+    color: #ff79c6;
+}
+
+.code-block code .token.boolean {
+    color: #bd93f9; 
+}
+
+.code-block code .token.string {
+    color: #f1fa8c;
+}
+
+.code-block code .token.number {
+    color: #bd93f9; 
+}
+
+
+.code-block code .token.comment {
+    color: #6272a4; 
+    font-style: italic;
+}
+
+.code-block code .token.operator {
+    color: #ffb86c; 
+}
+
+.code-block code .token.function {
+    color: #50fa7b; 
+}
+
+.code-block code .token.property {
+    color: #50fa7b; 
+}

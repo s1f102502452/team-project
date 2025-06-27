@@ -10,6 +10,7 @@
         <h1>Java Scriptについて</h1>
         <h2>JavaScriptとは？ - ウェブサイトに「命」を吹き込むプログラミング言語</h2>
         <p>私たちが日々インターネットで触れるウェブサイトは、単なる情報の羅列ではありません。ボタンをクリックするとメニューが開いたり、画像がスライドしたり、フォームに入力するとリアルタイムでエラーが表示されたり… これらの「動き」や「対話」を実現しているのが、**JavaScript（ジャバスクリプト）**というプログラミング言語です。</p>
+        
         <h2>基本的な文法</h2>
         <ol>
             <li><strong>変数(Variables)</strong>
@@ -18,6 +19,17 @@
                     <li>let : 後から値を変更できる変数を宣言する</li>
                     <li>const : 一度値を設定すると、後から変更できない（定数）変数を宣言する</li>
                 </ul>
+                <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">let message = "こんにちは、Javascript!"; //messageという変数に文字列を代入
+const PI = 3.14; //PIという定数に数値を代入
+
+console.log(message); //コンソールに "こんにちは、Javascript!" と表示
+console.log(PI); //コンソールに 3.14 と表示
+                    </code></pre>
+                </div>
             </li>
             <li><strong>データ型(Deta Types)</strong>
                 <p>JavaScriptでは、扱うデータの種類によって「データ型」があります。主なデータ型には以下のようなものがあります。</p>
