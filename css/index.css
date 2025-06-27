@@ -3,15 +3,19 @@ h1{
     background-color: #add8e6
 }
 
-body{
-    text-align: center;
-}
-ul {
-    display: inline-block; 
-    text-align: left; 
+h1{
+    font-family:'Courier New', Courier, monospace
 }
 
-ol {
-    display: inline-block; 
-    text-align: left; 
+.kajyougaki{
+    background-color: #d3d3d3;
+    border: 2px solid #333333;
+
+}
+
+.container{
+    max-width:  960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
