@@ -3,8 +3,12 @@ h1{
     background-color: #add8e6
 }
 
-h1{
-    font-family:'Courier New', Courier, monospace
+body{
+    text-align: center;
+}
+ul {
+    /* display: inline-block;  */
+    text-align: left; 
 }
 
 .kajyougaki{
