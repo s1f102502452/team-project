@@ -17,43 +17,257 @@
                 <p>変数は、データ（数値、テキストなど）を一時的に保存しておくための「箱」のようなものです。JavaScriptでは、letやconstといったキーワードを使って変数を宣言します。</p>
                 <ul>
                     <li>let : 後から値を変更できる変数を宣言する</li>
-                    <li>const : 一度値を設定すると、後から変更できない（定数）変数を宣言する</li>
-                </ul>
-                <div class = "code-block">
+                    <div class = "code-block">
                     <div class="code-header">
                         <span>JavaScript</span>
                     </div>
-                    <pre><code class="language-javascript">let message = "こんにちは、Javascript!"; //messageという変数に文字列を代入
-const PI = 3.14; //PIという定数に数値を代入
-
+                    <pre><code class="language-javascript"><span class="whiteBlue">let</span> message = "こんにちは、Javascript!"; //messageという変数に文字列を代入
 console.log(message); //コンソールに "こんにちは、Javascript!" と表示
-console.log(PI); //コンソールに 3.14 と表示
-                    </code></pre>
+</code></pre>
                 </div>
+                    <li>const : 一度値を設定すると、後から変更できない（定数）変数を宣言する</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript"><span class="whiteBlue">const</span> PI = 3.14; //PIという定数に数値を代入
+console.log(PI); //コンソールに 3.14 と表示</code></pre>
+                </div>
+                </ul>
+                
             </li>
             <li><strong>データ型(Deta Types)</strong>
                 <p>JavaScriptでは、扱うデータの種類によって「データ型」があります。主なデータ型には以下のようなものがあります。</p>
                 <ul>
                     <li>文字列(String) : テキストデータ。シングルクォート「'」またはダブルクォート「"」で囲む</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// 文字列（String）の例
+<span class="whiteBlue">let</span> myString = "こんにちは、世界！";
+console.log("文字列の例:", myString); // コンソールに "文字列の例: こんにちは、世界！" と表示
+console.log("型:", typeof myString); // コンソールに "型: string" と表示</code></pre>
+                </div>
                     <li>数値(Number) : 整数や少数などの数値データ</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// 数値（Number）の例
+<span class="whiteBlue">let</span> myInteger = 123;
+<span class="whiteBlue">let</span> myFloat = 45.67;
+console.log("整数の例:", myInteger); // コンソールに "整数の例: 123" と表示 
+console.log("型の例:", typeof myInteger); // コンソールに "型: number" と表示
+console.log("小数の例:", myFloat);    // コンソールに "小数の例: 45.67" と表示
+console.log("型の例:", typeof myFloat);  // コンソールに "型: number" と表示</code></pre>
+                </div>
                     <li>真偽値(Boolean) : ture(真)またはfalse(偽)の２つの値を持つデータ。条件分岐などで使われる。</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">//真偽値（Boolean）の例
+<span class="whiteBlue">let</span> isTrue = true;
+<span class="whiteBlue">let</span> isFalse = false;
+console.log("真の例:", isTrue);   // コンソールに "真の例: true" と表示
+console.log("型の例:", typeof isTrue); // コンソールに "型: boolean" と表示
+console.log("偽の例:", isFalse);  // コンソールに "偽の例: false" と表示
+console.log("型の例:", typeof isFalse); // コンソールに "型: boolean" と表示</code></pre>
+                </div>
                     <li>配列(Array) : 複数のデータを順序をつけて格納できるリストのようなもの。[] で囲む</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">配列 (Array) の例
+<span class="whiteBlue">let</span> fruits = ["りんご", "バナナ", "オレンジ"];
+console.log("配列の例:", fruits);           // コンソールに "配列の例: ['りんご', 'バナナ', 'オレンジ']" と表示
+console.log("配列の最初の要素:", fruits[0]); // コンソールに "配列の最初の要素: りんご" と表示
+console.log("型の例:", typeof fruits);       // コンソールに "型: object" と表示
+</code></pre>
+                </div>
                     <li>オブジェクト(Object) : キーと値のペアでデータを格納できる、より複雑なデータ構造。{} で囲む</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// オブジェクト (Object) の例
+<span class="whiteBlue">let</span> person = {
+    name: "山田太郎",
+    age: 28,
+    city: "東京"
+};
+console.log("オブジェクトの例:", person);           // コンソールに "オブジェクトの例: {name: '山田太郎', age: 28, city: '東京'}" と表示
+console.log("オブジェクトの名前:", person.name);     // コンソールに "オブジェクトの名前: 山田太郎" と表示
+console.log("オブジェクトの年齢:", person["age"]);  // コンソールに "オブジェクトの年齢: 28" と表示
+console.log("型の例:", typeof person);             // コンソールに "型: object" と表示</code></pre>
+                </div>
                 </ul>
+                
             </li>
             <li><strong>演算子(Operators)</strong>
                 <p>演算子は、変数や値に対して様々な操作を行うために使われる</p>
                 <ul>
                     <li>算術演算子 : 足し算( + )、引き算( - )、掛け算( * )、割り算( / )など</li>
-                    <li>比較演算子 : ２つの値を比較し、trueまたはfalseを返す。等しい( == または === )、より大きい( > )、より小さい( < )など。</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// 算術演算子の例
+// 数値の計算に使用します。
+let num1 = 10;
+let num2 = 3;
+
+let addResult = num1 + num2;   // 足し算
+console.log("足し算:", addResult); // コンソールに "足し算: 13" と表示
+
+let subResult = num1 - num2;   // 引き算
+console.log("引き算:", subResult); // コンソールに "引き算: 7" と表示
+
+let mulResult = num1 * num2;   // 掛け算
+console.log("掛け算:", mulResult); // コンソールに "掛け算: 30" と表示
+
+let divResult = num1 / num2;   // 割り算
+console.log("割り算:", divResult); // コンソールに "割り算: 3.333..." と表示
+
+let modResult = num1 % num2;   // 剰余（割り算の余り）
+console.log("剰余:", modResult); // コンソールに "剰余: 1" と表示</code></pre>
+                </div>
+                    <li>比較演算子 : ２つの値を比較し、trueまたはfalseを返す。等しい( == または === )、より大きい( &gt; )、より小さい( &lt; )など。</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// 比較演算子の例
+// 二つの値を比較し、結果を true または false で返します。
+let a = 5;
+let b = 10;
+let c = "5"; // 文字列の"5"
+
+let isEqualValue = (a == c);  // 値が等しいか (型は問わない)
+console.log("a == c:", isEqualValue); // コンソールに "a == c: true" と表示
+
+let isEqualStrict = (a === c); // 値と型がともに等しいか (厳密な比較)
+console.log("a === c:", isEqualStrict); // コンソールに "a === c: false" と表示
+
+let isNotEqual = (a != b);    // 等しくないか
+console.log("a != b:", isNotEqual); // コンソールに "a != b: true" と表示
+
+let isGreaterThan = (b &gt; a);   // bがaより大きいか
+console.log("b &gt; a:", isGreaterThan); // コンソールに "b &gt; a: true" と表示
+
+let isLessThan = (a &lt; b);      // aがbより小さいか
+console.log("a &lt; b:", isLessThan); // コンソールに "a &lt; b: true" と表示</code></pre>
+                </div>
                     <li>論理演算子 : 複数の条件を組み合わせる際に使われる。AND( && )、OR( || )、NOT( ! )など</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// 論理演算子の例
+// 複数の条件を組み合わせたり、条件を反転させたりするのに使用します。
+let isAdult = true;
+let hasLicense = false;
+
+// AND (&&): 両方の条件がtrueの場合にtrue
+let canDrive = isAdult && hasLicense;
+console.log("成人で免許あり (AND):", canDrive); // コンソールに "成人で免許あり (AND): false" と表示
+
+// OR (||): どちらか一方でもtrueならtrue
+let canEnterBar = isAdult || hasLicense; // 例: 成人なら、または免許があればバーに入れる（ここでは例として）
+console.log("成人または免許あり (OR):", canEnterBar); // コンソールに "成人または免許あり (OR): true" と表示
+
+// NOT (!): 条件を反転させる (trueならfalse、falseならtrue)
+let isChild = !isAdult;
+console.log("子供か (!isAdult):", isChild); // コンソールに "子供か (!isAdult): false" と表示</code></pre>
+                </div>
                 </ul>
+                <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">
+                    </code></pre>
+                </div>
             </li>
             <li><strong>条件分岐(Conditional Statements)</strong>
                 <p>条件分岐は、特定の条件が満たされた場合のみ処理を実行するために使用する。if、else if、elseが一般的です</p>
+                <ul>
+                    <li>if, else if, else
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// 条件分岐 (if, else if, else) の例
+// 特定の条件が満たされたときに、異なる処理を実行します。
+
+let score = 85; // テストの点数を想定
+
+// if文: もし点数が90点以上なら「A判定」
+if (score >= 90) {
+    console.log("A判定です！"); // コンソールに "A判定です！" と表示
+}
+// else if文: そうではなく、もし点数が70点以上なら「B判定」
+else if (score >= 70) {
+    console.log("B判定です。"); // コンソールに "B判定です。" と表示 (この例の場合、ここが実行される)
+}
+// else文: それ以外（70点未満）なら「C判定」
+else {
+    console.log("C判定です。"); // コンソールに "C判定です。" と表示
+}</code></pre>
+                </div>
+                </li>
+                </ul>
             </li>
             <li><strong>繰り返し処理(Loops)</strong>
                 <p>繰り返し処理は、同じコードを複数回実行するために使われる。forループやwhileループが代表的です。</p>
+                <ul>
+                    <li>forループ</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// forループの例
+// 決まった回数だけ処理を繰り返したいときに便利です。
+// (初期化; 条件式; 更新式) の順に記述します。
+
+console.log("--- forループ: 1から5まで数える ---");
+for (let i = 1; i &lt;= 5; i++) { // iを1から始め、5以下である限り1ずつ増やしながら繰り返す
+    console.log("現在の数値:", i); // コンソールに "現在の数値: 1", "現在の数値: 2", ... "現在の数値: 5" と表示
+}
+
+console.log("\n--- forループ: 配列の要素を順に表示 ---");
+let fruits = ["りんご", "バナナ", "チェリー"];
+for (let i = 0; i &lt; fruits.length; i++) { // 配列の最初の要素(0番目)から最後の要素まで繰り返す
+    console.log(fruits[i]); // コンソールに "りんご", "バナナ", "チェリー" と表示
+}</code></pre>
+                </div>
+                    <li>whileループ</li>
+                    <div class = "code-block">
+                    <div class="code-header">
+                        <span>JavaScript</span>
+                    </div>
+                    <pre><code class="language-javascript">// whileループの例
+// 特定の条件が満たされている間、処理を繰り返したいときに便利です。
+// 条件が false にならないと無限ループになるので注意が必要です。
+
+console.log("\n--- whileループ: カウントダウン ---");
+let count = 5;
+while (count > 0) { // countが0より大きい間、繰り返す
+    console.log("残り:", count); // コンソールに "残り: 5", "残り: 4", ... "残り: 1" と表示
+    count--; // countを1ずつ減らす（この行がないと無限ループになる！）
+}
+
+console.log("\n--- whileループ: 条件が満たされるまで繰り返す例 ---");
+let randomNumber = 0;
+while (randomNumber &lt; 0.8) { // randomNumberが0.8未満である間、繰り返す
+    randomNumber = Math.random(); // 0以上1未満のランダムな数を生成
+    console.log("ランダムな数値:", randomNumber); // コンソールにランダムな数値が表示され続ける
+}
+console.log("条件が満たされました (>= 0.8):", randomNumber); // コンソールに条件を満たした数値が表示</code></pre>
+                </div>
+                </ul>
             </li>
             <li><strong>関数(Functions)</strong>
                 <p>関数は、特定のタスクを実行するための一連のコードをひとまとめにしたものです。同じ処理を何度も実行する場合や、コードを整理する際に非常に便利です。</p>
